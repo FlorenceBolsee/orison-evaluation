@@ -1,0 +1,70 @@
+// ▬▬▬▬ B A S I C    M I X I N S ▬▬▬▬
+
+@mixin columns($divider : 2) {
+  width: calc(100% / #{$divider});
+}
+
+@mixin transition($duree : .3s, $target : all, $easing : ease-in-out) {
+	transition:$duree $target $easing;
+}
+
+@mixin boxshadow($posX : 0, $posY : 3px, $blur : 3px) {
+	box-shadow: $posX $posY $blur rgba(0, 0, 0, .5);
+}
+
+// ▬▬▬▬ : : B E F O R E  : : A F T E R ▬▬▬▬
+
+@mixin pseudo($display: block, $content: '') {
+	content: $content;
+	display: $display;
+}
+
+// ▬▬▬▬ T R I A N G L E ▬▬▬▬
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+	@include pseudo($pos: $position);
+	width: 0;
+	height: 0;
+	@if $round {
+		border-radius: 3px;
+	}
+	@if $direction == down {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+		margin-top: 0 - round( $size / 2.5 );
+	} @else if $direction == up {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+		margin-bottom: 0 - round( $size / 2.5 );
+	} @else if $direction == right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+		margin-right: -$size;
+	} @else if  $direction == left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+		margin-left: -$size;
+	}
+}
+
+// ▬▬▬▬ F O N T ▬▬▬▬
+
+@mixin font-source-sans($family: 'arial', $size: false, $colour: false, $weight: false,  $lh: false) {    
+	font-family: $family;
+	@if $size {
+		font-size: $size;
+	}
+	@if $colour {
+		color: $colour;
+	}
+	@if $weight {
+		font-weight: $weight;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+}

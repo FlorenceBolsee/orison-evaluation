@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/easy-reveal.min.css">
         <link rel="stylesheet" href="css/style.min.css">
     </head>
-    <body>
+    <body class="blog-page">
 
       <!--
 
@@ -49,11 +49,12 @@
         ::: HERO :::
 
          -->
-
-        <h1 class="hero__headline"></h1>
-        <small class="hero__date"></small>
-        <a class="hero__btn hero__btn--light btn" href="product.html"target="_blank">Get it now</a>
-        <div class="hero__parallax"></div>
+        <div class="hero__container">
+          <h1 class="hero__headline"></h1>
+          <small class="hero__date"></small>
+          <a class="hero__btn hero__btn--light btn" href="product.html"target="_blank">Get it now</a>
+          <div class="hero__parallax"></div>
+        </div>
       </header>
 
       <!--
@@ -71,10 +72,10 @@
          -->
 
         <section class="blogs">
-          <div class="blog easy-reveal">
+          <div class="blog blog--first easy-reveal">
             <img class="blog__img" src="img/blog-cvr-9-26.jpg" alt="Awards">
             <h2 class="blog__title">Orison Selected as a Finalist for CONNECT’s 30th Annual Most Innovative New Product Awards</h2>
-            <small class="blog__date">November 15, 2017 by <a class="blog__author" href="article.html">Melanie Venter</a></small>
+            <small><span class="blog__date">November 15, 2017</span> by <a class="blog__author" href="article.html">Melanie Venter</a></small>
             <p class="blog__intro">Orison has been selected as a finalist in CONNECT’s Most Innovative New Product Awards in its Cleantech, Sustainability, and Energy category . CONNECT, a premier innovation company accelerator in San Diego that creates and scales great companies in the technology and life sciences sectors, continues its thirty-year tradition of celebrating innovation leaders in the local San […]</p>
             <a class="blog__btn blog__btn--light btn" href="article.html"target="_blank">Read More</a>
           </div>
@@ -228,35 +229,37 @@
 
        -->
 
-      <footer class="get-in-touch">
-        <nav class="footer-menu">
-          <ul class="footer-menu__wrapper">
-            <li><a class="footer-menu__links" href="products.html">Products</a></li>
-            <li><a class="footer-menu__links" href="#">About</a></li>
-            <li><a class="footer-menu__links" href="blog.html">Blog</a></li>
-          </ul>
-          <ul class="footer-menu__wrapper">
-            <li><a class="footer-menu__links" href="contact.html">Contact</a></li>
-            <li><a class="footer-menu__links" href="#">Faqs</a></li>
-            <li><a class="footer-menu__links" href="#">Media</a></li>
-          </ul>
-        </nav>
-        <div class="get-in-touch__socials-wrapper">
-          <a class="get-in-touch__socials-links" href="https://www.facebook.com/OrisonEnergy/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a class="get-in-touch__socials-links" href="https://twitter.com/orisonenergy" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a class="get-in-touch__socials-links" href="https://www.instagram.com/orisonenergy/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a class="get-in-touch__socials-links" href="https://www.linkedin.com/company/orison" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        </div>
-        <form action="#">
-          <label class="get-in-touch__label" for="email">Sign up for updates</label>
-          <input class="get-in-touch__email" type="text" id="email" name="email" placeholder="Email"/>
-          <button type="submit" class="get-in-touch__btn"> Submit</button>
-        </form>
-        <small class="get-in-touch__copyright">
-          ©2016 Orison.<br>
-          All rights reserved.
-        </small>
-      </footer>
+       <footer class="get-in-touch">
+         <div class="get-in-touch__container">
+           <nav class="footer-menu">
+             <ul class="footer-menu__wrapper">
+               <li><a class="footer-menu__links" href="products.html">Products</a></li>
+               <li><a class="footer-menu__links" href="#">About</a></li>
+               <li><a class="footer-menu__links" href="blog.html">Blog</a></li>
+             </ul>
+             <ul class="footer-menu__wrapper">
+               <li><a class="footer-menu__links" href="contact.html">Contact</a></li>
+               <li><a class="footer-menu__links" href="#">Faqs</a></li>
+               <li><a class="footer-menu__links" href="#">Media</a></li>
+             </ul>
+           </nav>
+           <div class="get-in-touch__socials-wrapper">
+             <a class="get-in-touch__socials-links" href="https://www.facebook.com/OrisonEnergy/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+             <a class="get-in-touch__socials-links" href="https://twitter.com/orisonenergy" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a class="get-in-touch__socials-links" href="https://www.instagram.com/orisonenergy/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+             <a class="get-in-touch__socials-links" href="https://www.linkedin.com/company/orison" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+           </div>
+           <form action="#">
+             <label class="get-in-touch__label" for="email">Sign up for updates</label>
+             <input class="get-in-touch__email" type="text" id="email" name="email" placeholder="Email"/>
+             <button type="submit" class="get-in-touch__btn btn"> Submit</button>
+           </form>
+           <small class="get-in-touch__copyright">
+             ©2016 Orison.<br>
+             All rights reserved.
+           </small>
+         </div>
+       </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
         <script src="js/easy-reveal.min.js"></script>

@@ -20,7 +20,7 @@ a {
   border: 1px solid #fff;
 }
 
-.hero__btn {
+.hero__btn, .products__btn, .get-in-touch__btn, .contact__btn {
   @media screen and (min-width: $tablet) {
     &:hover {
       background: #fff;
@@ -28,7 +28,7 @@ a {
   }
 }
 
-.menu__btn {
+.menu__btn, .get-in-touch__socials-links {
   @media screen and (min-width: $tablet) {
     &:hover {
       border: 1px solid $grey2;
@@ -36,9 +36,18 @@ a {
   }
 }
 
-.hero__btn--light, .products__btn, .get-in-touch__btn {
+.hero__btn--light, .products__btn, .get-in-touch__btn, .contact__btn {
   border: 0;
   background: $grey2;
+}
+
+.read-more__btn, .reservation__btn {
+  @media screen and (min-width: $tablet) {
+    &:hover {
+      border: 1px solid transparent;
+      background: $grey2;
+    }
+  }
 }
 
 
@@ -49,7 +58,7 @@ a {
   margin: 0 auto;
 }
 
-.how-it-works, .products, .press {
+.how-it-works, .products, .press, .FlickR, .google {
   padding: 60px 20px 45px;
 }
 
@@ -59,6 +68,9 @@ a {
 
 .why-orison, .read-more__block {
   padding: 60px 40px 60px;
+  @media screen and (min-width: $desktop){
+    padding: 100px 0 130px;
+  }
 }
 
 // ::: SECTION HOW IT WORKS :::
@@ -68,7 +80,7 @@ a {
   text-align: center;
   background: $grey3;
 
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $desktop){
     height: 700px;
   }
 }
@@ -83,7 +95,7 @@ a {
   width: 100%;
   margin: 50px auto;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     position: absolute;
     top: 300px;
     left: 0;
@@ -96,20 +108,50 @@ a {
 // ::: SECTION PRODUCTS PRESENTATION :::
 
 
+.products__wrapper {
+  @extend .wrapper;
+  @media screen and (min-width: $desktop) {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.products__wrapper:first-of-type {
+  @media screen and (min-width: $desktop) {
+    padding: 350px 0 0;
+  }
+}
+
+
 .products__text {
   padding-bottom: 40px;
+  max-width: 445px;
 }
 
 .products_photo {
   display: block;
   max-height: 400px;
   margin: 40px auto;
+  @media screen and (min-width: $desktop) {
+    max-height: none;
+    max-width: 330px;
+    margin: 40px;
+  }
 }
 
 .products_photo--panel {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+    max-width: 530px;
+    position: relative;
+    top: 40px;
+    left: -50px;
+  }
 }
 
 
@@ -121,10 +163,37 @@ a {
   text-align: center;
 }
 
+.why-orison__wrapper {
+  @extend .wrapper;
+}
+
 .features__logo {
   width: 85px;
   height: 85px;
-  margin: 30px 0 15px
+  margin: 30px 0 15px;
+  @media screen and (min-width: $desktop) {
+    margin: 60px 0 40px;
+  }
+}
+
+.features {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-flow: wrap;
+  }
+}
+
+.features__wrapper {
+  @media screen and (min-width: $desktop) {
+    flex-basis: 33%;
+  }
+}
+
+.features__text {
+  @media screen and (min-width: $desktop) {
+    max-width: 250px;
+    margin: 10px auto;
+  }
 }
 
 
@@ -133,18 +202,34 @@ a {
 
 .read-more {
   background: $grey3;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-flow: wrap;
+    align-items: stretch;
+  }
 }
 
-.read-more__block--img1 {
-  height: 270px;
-  background: url("../img/Orison-Panel-Series.jpg");
-  background-size: cover;
+.read-more__block {
+  padding: 60px 40px;
+  @media screen and (min-width: $desktop) {
+    padding: 60px 10%;
+  }
+  @media screen and (min-width: $desktopL) {
+    width: 50%;
+    padding: 20px 10%;
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+  }
 }
 
-.read-more__block--img2 {
-  height: 270px;
-  background: url("../img/Orison-Tower-Cord.jpg");
-  background-size: cover;
+.read-more__block--img {
+  padding: 0;
+  width: 100%;
+  @media screen and (min-width: $desktop) {
+    width: 50%;
+    align-self: flex-start;
+  }
 }
 
 .read-more__text {
@@ -162,6 +247,10 @@ a {
 
 .reservation__photo {
   width: 100%;
+  max-width: 520px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .reservation__subtitle {
@@ -175,6 +264,17 @@ a {
 .press {
   background: $grey2;
   text-align: center;
+  @media screen and (min-width: $desktop) {
+    padding: 100px 20px;
+  }
+}
+
+.press__wrapper {
+  @extend .wrapper;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-flow: wrap;
+  }
 }
 
 .press__logo {
@@ -187,6 +287,9 @@ a {
 
 .press__quote {
   padding-bottom: 50px;
+  @media screen and (min-width: $desktop) {
+    flex-basis: 33%;
+  }
 }
 
 .press__text {

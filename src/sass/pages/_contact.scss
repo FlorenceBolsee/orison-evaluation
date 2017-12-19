@@ -1,10 +1,105 @@
-#map {
-  height: 400px;
+// ::: HERO :::
+
+.contact-page {
+  .hero {
+    background: none;
+    text-align: center;
+    padding-bottom: 0;
+    @media screen and (min-width: $tablet) {
+      padding-top: 150px;
+    }
+  }
+  .hero__headline {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+
+
+// ::: FORMULAIRE CONTACT :::
+
+.contact__form {
+  padding: 5px 20px 40px;
+  @media screen and (min-width: $tablet) {
+    padding: 40px 20px 80px;
+  }
+}
+
+.contact__wrapper {
+  @extend .wrapper;
+
+  input, textarea, button {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  textarea {
+    max-height: 120px;
+    resize: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  button {
+    @media screen and (min-width: $tablet) {
+      @include transition;
+      width: auto;
+      margin: 20px auto;
+      padding: 11px 44px;
+    }
+  }
+}
+
+.contact__btn {
+  cursor: pointer;
+}
+
+#FirstName, #LastName {
+  @media screen and (min-width: $tablet) {
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+#LastName {
+  @media screen and (min-width: $tablet) {
+    margin-left: 15px;
+  }
+}
+
+
+// ::: API FlickR :::
+
+
+.FlickR {
+  background: #fff;
+  text-align: center;
 }
 
 .FlickR__img {
-  width: 212px;
-  height: 212px;
+  width: 230px;
+  height: 230px;
   object-fit: cover;
   cursor: pointer;
+}
+
+.FlickR__container {
+  @extend .wrapper;
+}
+
+// ::: API GOOGLE MAPS :::
+
+
+.google {
+  @extend .FlickR;
+  padding-bottom: 150px;
+}
+
+#map {
+  @extend .wrapper;
+  height: 400px;
 }

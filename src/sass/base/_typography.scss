@@ -1,0 +1,236 @@
+@font-face {
+	font-family: "Akkurat";
+	font-weight: 700;
+	src: url("../fonts/lineto-akkurat-pro-bold.eot") format("eot"),
+	     url("../fonts/lineto-akkurat-pro-bold.woff") format("woff")
+}
+
+@font-face {
+	font-family: "Akkurat";
+	font-weight: 400;
+	src: url("../fonts/lineto-akkurat-pro-regular.eot") format("eot"),
+	     url("../fonts/lineto-akkurat-pro-regular.woff") format("woff")
+}
+
+@font-face {
+	font-family: "Akkurat";
+	font-weight: 200;
+	src: url("../fonts/lineto-akkurat-pro-light.eot") format("eot"),
+	     url("../fonts/lineto-akkurat-pro-light.woff") format("woff")
+}
+
+
+// GLOBAL
+
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: "Akkurat";
+}
+
+.fontXS {
+	font-size: 1.1rem;
+}
+
+.fontSM {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.fontMD {
+	font-size: 1.6rem;
+}
+
+.fontLA {
+	font-size: 3.6rem;
+	font-weight: 200;
+}
+
+.fontLA-2 {
+	font-size: 4rem;
+	font-weight: 200;
+}
+
+.fontXL {
+	font-size: 4.8rem;
+	font-weight: 200;
+}
+
+
+// LINKS
+
+
+.menu__links, .menu__btn {
+	@extend .fontSM;
+	color: #fff;
+	@media screen and (min-width: $tablet) {
+		&:hover {
+			text-decoration: none;
+			color: $grey2;
+		}
+	}
+}
+
+.hero__btn, .products__btn, .read-more__btn, .reservation__btn, .get-in-touch__btn {
+	@extend .fontXS;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@media screen and (min-width: $tablet) {
+		&:hover {
+			text-decoration: none;
+			color: $grey4;
+		}
+	}
+}
+
+.read-more__btn, .reservation__btn {
+	@media screen and (min-width: $tablet) {
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+.footer-menu__links {
+	@extend .fontXS;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	@media screen and (min-width: $tablet) {
+		&:hover {
+			text-decoration: none;
+			color: $grey2;
+		}
+	}
+}
+
+.get-in-touch__socials-links {
+	@extend .fontMD;
+	color: #fff;
+	@media screen and (min-width: $tablet) {
+		&:hover {
+			text-decoration: none;
+			color: $grey2;
+		}
+	}
+}
+
+
+// TITLES
+
+
+.hero__headline {
+	@extend .fontLA;
+	line-height: 3.8rem;
+	color: $grey1;
+}
+
+.hero__headline--strong {
+	@extend .fontXL;
+	color: #fff;
+}
+
+.how-it-works__title, .products__title, .why-orison__title {
+	@extend .fontMD;
+	font-weight: 700;
+	color: $grey2;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.products__name, .read-more__title, .reservation__title {
+	font-size: 2.4rem;
+	font-weight: 200;
+	color: #fff;
+	@media screen and (min-width: $tablet) {
+		font-size: 4rem;
+	}
+}
+
+.why-orison__subtitle {
+	font-size: 2rem;
+	line-height: 3rem;
+	font-weight: 200;
+	color: $grey4;
+	@media screen and (min-width: $tablet) {
+		font-size: 2.8rem;
+		line-height: 4.8rem;
+	}
+}
+
+.features__title {
+	@extend .fontSM;
+	color: $grey4;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.reservation__subtitle {
+	font-size: 2rem;
+	font-weight: 400;
+	color: $grey1;
+}
+
+
+// TEXT
+
+
+.how-it-works__text {
+	font-size: 2rem;
+	font-weight: 200;
+	line-height: 3rem;
+	color: #fff;
+	@media screen and (min-width: $tablet) {
+		font-size: 2.8rem;
+		line-height: 4.8rem;
+	}
+}
+
+.products__text {
+	@extend .fontMD;
+	color: $grey1;
+}
+
+.features__text, .read-more__text {
+	@extend .fontMD;
+	font-weight: 200;
+	color: $grey5;
+}
+
+.read-more__text {
+	color: $grey1;
+}
+
+.press__text {
+	@extend .fontMD;
+	font-weight: 200;
+	color: #000;
+}
+
+.get-in-touch__copyright {
+	@extend .fontSM;
+	font-weight: 200;
+	color: $grey1;
+}
+
+
+// FORM
+
+
+.get-in-touch__label {
+	font-size: .8rem;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.get-in-touch__email::placeholder {
+	font-size: 1.1rem;
+}

@@ -1,0 +1,71 @@
+.get-in-touch {
+  background: $grey3;
+  padding: 50px 20px 50px;
+  text-align: center;
+}
+
+// NAV
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    padding: 3px;
+  }
+}
+
+.footer-menu__wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+// SOCIALS
+
+
+.get-in-touch__socials-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.get-in-touch__socials-links {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0 10px;
+
+  i {
+    margin: auto;
+  }
+}
+
+
+// FORM
+
+
+.get-in-touch form {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.get-in-touch__label, .get-in-touch__email {
+  flex-basis: 100%;
+}
+
+.get-in-touch__email {
+  border: 1px solid $grey1;
+  background: none;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.get-in-touch__copyright {
+  display: block;
+  padding: 20px;
+}

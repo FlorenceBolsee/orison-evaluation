@@ -1,9 +1,198 @@
-#map {
-  height: 400px;
+body {
+  background: $grey4;
 }
 
-.FlickR__img {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
+a {
+  @include transition;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+
+// BUTTONS
+
+
+.btn {
+  padding: 11px 44px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+}
+
+.hero__btn {
+  @media screen and (min-width: $tablet) {
+    &:hover {
+      background: #fff;
+    }
+  }
+}
+
+.menu__btn {
+  @media screen and (min-width: $tablet) {
+    &:hover {
+      border: 1px solid $grey2;
+    }
+  }
+}
+
+.hero__btn--light, .products__btn, .get-in-touch__btn {
+  border: 0;
+  background: $grey2;
+}
+
+
+// INDEX - SECTIONS
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.how-it-works, .products, .press {
+  padding: 60px 20px 45px;
+}
+
+.how-it-works__title, .products__title {
+  padding-bottom: 10px;
+}
+
+.why-orison, .read-more__block {
+  padding: 60px 40px 60px;
+}
+
+// ::: SECTION HOW IT WORKS :::
+
+
+.how-it-works {
+  text-align: center;
+  background: $grey3;
+
+  @media screen and (min-width: $tablet){
+    height: 700px;
+  }
+}
+
+.how-it-works__wrapper {
+  @extend .wrapper;
+  position: relative;
+}
+
+.how-it-works__video {
+  max-width: 1100px;
+  width: 100%;
+  margin: 50px auto;
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    margin: 0;
+  }
+}
+
+
+
+// ::: SECTION PRODUCTS PRESENTATION :::
+
+
+.products__text {
+  padding-bottom: 40px;
+}
+
+.products_photo {
+  display: block;
+  max-height: 400px;
+  margin: 40px auto;
+}
+
+.products_photo--panel {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+
+// ::: SECTION WHY ORISON :::
+
+
+.why-orison {
+  background: #fff;
+  text-align: center;
+}
+
+.features__logo {
+  width: 85px;
+  height: 85px;
+  margin: 30px 0 15px
+}
+
+
+// ::: SECTION READ UP :::
+
+
+.read-more {
+  background: $grey3;
+}
+
+.read-more__block--img1 {
+  height: 270px;
+  background: url("../img/Orison-Panel-Series.jpg");
+  background-size: cover;
+}
+
+.read-more__block--img2 {
+  height: 270px;
+  background: url("../img/Orison-Tower-Cord.jpg");
+  background-size: cover;
+}
+
+.read-more__text {
+  padding-bottom: 30px;
+}
+
+
+// ::: SECTION RESERVATION :::
+
+
+.reservation {
+  text-align: center;
+  padding: 60px 20px 70px;
+}
+
+.reservation__photo {
+  width: 100%;
+}
+
+.reservation__subtitle {
+  padding-bottom: 40px;
+}
+
+
+// ::: SECTION PRESS :::
+
+
+.press {
+  background: $grey2;
+  text-align: center;
+}
+
+.press__logo {
+  width: 180px;
+}
+
+.press__logo--strip {
+  width: 100%;
+}
+
+.press__quote {
+  padding-bottom: 50px;
+}
+
+.press__text {
+  margin-top: 40px;
+}
+
+.press__quote:last-of-type {
+  padding-bottom: 100px;
 }

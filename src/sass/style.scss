@@ -1,11 +1,15 @@
-@import 'base/reset';
-
-@import "base/typography";
-
 @import "helpers/variables";
 @import "helpers/mixins";
+
+@import 'base/reset';
+@import "base/typography";
 
 @import "layout/global";
 
 @import "layout/header";
 @import "layout/footer";
+
+@import "pages/blog";
+@import "pages/contact";
+@import "pages/products";
+@import "pages/single";

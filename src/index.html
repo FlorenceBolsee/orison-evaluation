@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="description" content="Meet Orison The first all-in-one, self-installable home battery system.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Homepage Orison</title>
+        <title>Homepage - Orison</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/easy-reveal.min.css">
         <link rel="stylesheet" href="css/style.min.css">
@@ -26,15 +26,22 @@
          -->
 
         <nav class="menu">
-          <a class="menu__links" href="index.html"><img class="menu__logo" src="img/logo.svg" alt="Orison"></a>
-          <ul class="menu__wrapper">
-            <li><a class="menu__links" href="products.html">Products</a></li>
-            <li><a class="menu__links" href="#">About</a></li>
-            <li><a class="menu__links" href="blog.html">Blog</a></li>
-            <li><a class="menu__links" href="contact.html">Contact</a></li>
-            <li><a class="menu__links" href="#">Media</a></li>
-          </ul>
-          <a class="menu__btn btn" href="product.html" target="_blank">Reserve Now</a>
+          <div class="menu__container">
+            <a class="menu__links" href="index.html"><img class="menu__logo" src="img/logo.svg" alt="Orison"></a>
+            <ul class="menu__wrapper">
+              <li class="menu__elements"><a class="menu__links" href="products.html">Products</a></li>
+              <li class="menu__elements"><a class="menu__links" href="#">About</a></li>
+              <li class="menu__elements"><a class="menu__links" href="blog.html">Blog</a></li>
+              <li class="menu__elements"><a class="menu__links" href="contact.html">Contact</a></li>
+              <li class="menu__elements"><a class="menu__links" href="#">Media</a></li>
+            </ul>
+            <a class="menu__btn btn" href="product.html" target="_blank">Reserve Now</a>
+            <div class="menu__burger">
+              <span class="menu__bar menu__bar--top"></span>
+              <span class="menu__bar menu__bar--mid"></span>
+              <span class="menu__bar menu__bar--bot"></span>
+            </div>
+          </div>
         </nav>
 
         <!--
@@ -42,15 +49,16 @@
         ::: HERO :::
 
          -->
-
-        <h1 class="hero__headline">
-          <strong class="hero__headline hero__headline--strong">Meet Orison</strong>
-          The first all-in-one,
-          self-installable
-          home battery system.
-        </h1>
-        <a class="hero__btn hero__btn--light btn" href="product.html"target="_blank">Get it now</a>
-        <a class="hero__btn btn" href="product.html"target="_blank">More info</a>
+        <div class="hero__container">
+          <h1 class="hero__headline">
+            <strong class="hero__headline hero__headline--strong">Meet Orison</strong>
+            The first all-in-one,<br>
+            self-installable<br>
+            home battery system.
+          </h1>
+          <a class="hero__btn hero__btn--light btn" href="product.html"target="_blank">Get it now</a>
+          <a class="hero__btn btn" href="product.html"target="_blank">More info</a>
+        </div>
       </header>
 
       <!--
@@ -73,10 +81,10 @@
             <p class="how-it-works__text">
               Store energy and intelligently power your home or business with the first ever plug-and-play solution. Whether you get your energy from the grid or solar, you can now control when to store it and when to use it.
             </p>
+            <video class="how-it-works__video easy-reveal" autoplay controls loop>
+              <source src="media\ORI-House-Revision_v09-1.mp4" type="video/mp4">
+            </video>
           </div>
-          <video class="how-it-works__video easy-reveal" width="320" height="240" autoplay controls loop>
-            <source src="media\ORI-House-Revision_v09-1.mp4" type="video/mp4">
-          </video>
         </section>
 
         <!--
@@ -96,13 +104,13 @@
             <img class="products_photo easy-reveal" src="img/product-two-towers.png" alt="Product two towers">
           </div>
           <div class="products__wrapper">
+            <img class="products_photo products_photo--panel easy-reveal" src="img/product-panel.png" alt="Product panel">
             <div class="products__description">
               <h2 class="products__title easy-reveal">Wall mounted</h2>
               <h3 class="products__name easy-reveal">Orison Panel</h3>
               <p class="products__text easy-reveal">Our Panel system with colorful LED lights is designed to be mounted on any indoor wall.  With tailored skins it can be displayed as art or concealed behind furniture and appliances.</p>
               <a class="products__btn btn easy-reveal" href="product.html" target="_blank">Learn more</a>
             </div>
-            <img class="products_photo easy-reveal" src="img/product-panel.png" alt="Product panel">
           </div>
         </section>
 
@@ -171,6 +179,13 @@
             <a class="read-more__btn btn" href="product.html" target="_blank">Read up</a>
           </div>
         </section>
+
+        <!--
+
+        ::: SECTION RESERVATION :::
+
+         -->
+
         <section class="reservation">
           <img class="reservation__photo easy-reveal" src="img/panelandtower.png" alt="Orison products">
           <h2 class="reservation__title easy-reveal">Power your home and the future</h2>
@@ -198,7 +213,7 @@
               <img class="press__logo" src="img/Business-Insider-Logo.svg" alt="Business Insider logo">
               <blockquote class="press__text">“Users also get an app that lets them control how everything functions over the internet.”</blockquote>
             </div>
-            <img class="press__logo press__logo--strip easy-reveal" src="img/Press-Logo-Strip-2280.png" alt="Press logo">
+            <a class="press__link" href="index.html"><img class="press__logo press__logo--strip easy-reveal" src="img/Press-Logo-Strip-2280.png" alt="Press logo"></a>
           </div>
         </section>
       </main>
@@ -231,10 +246,10 @@
         <form action="#">
           <label class="get-in-touch__label" for="email">Sign up for updates</label>
           <input class="get-in-touch__email" type="text" id="email" name="email" placeholder="Email"/>
-          <button type="submit" class="get-in-touch__btn"> Submit</button>
+          <button type="submit" class="get-in-touch__btn btn"> Submit</button>
         </form>
         <small class="get-in-touch__copyright">
-          ©2016 Orison.
+          ©2016 Orison.<br>
           All rights reserved.
         </small>
       </footer>

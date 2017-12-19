@@ -53,7 +53,7 @@
 
 // ▬▬▬▬ F O N T ▬▬▬▬
 
-@mixin font-source-sans($family: 'arial', $size: false, $colour: false, $weight: false,  $lh: false) {    
+@mixin font ($family: 'arial', $size: false, $colour: false, $weight: false,  $lh: false) {    
 	font-family: $family;
 	@if $size {
 		font-size: $size;

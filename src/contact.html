@@ -7,6 +7,9 @@
         <title>Contact - Orison</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/easy-reveal.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/featherlight.min.css">
         <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body>
@@ -25,17 +28,24 @@
 
          -->
 
-        <nav class="menu">
-          <a class="menu__links" href="index.html"><img class="menu__logo" src="img/logo.svg" alt="Orison"></a>
-          <ul class="menu__wrapper">
-            <li><a class="menu__links" href="products.html">Products</a></li>
-            <li><a class="menu__links" href="#">About</a></li>
-            <li><a class="menu__links" href="blog.html">Blog</a></li>
-            <li><a class="menu__links" href="contact.html">Contact</a></li>
-            <li><a class="menu__links" href="#">Media</a></li>
-          </ul>
-          <a class="menu__btn btn" href="product.html" target="_blank">Reserve Now</a>
-        </nav>
+         <nav class="menu">
+           <div class="menu__container">
+             <a class="menu__links" href="index.html"><img class="menu__logo" src="img/logo.svg" alt="Orison"></a>
+             <ul class="menu__wrapper">
+               <li class="menu__elements"><a class="menu__links" href="products.html">Products</a></li>
+               <li class="menu__elements"><a class="menu__links" href="#">About</a></li>
+               <li class="menu__elements"><a class="menu__links" href="blog.html">Blog</a></li>
+               <li class="menu__elements"><a class="menu__links" href="contact.html">Contact</a></li>
+               <li class="menu__elements"><a class="menu__links" href="#">Media</a></li>
+             </ul>
+             <a class="menu__btn btn" href="product.html" target="_blank">Reserve Now</a>
+             <div class="menu__burger">
+               <span class="menu__bar menu__bar--top"></span>
+               <span class="menu__bar menu__bar--mid"></span>
+               <span class="menu__bar menu__bar--bot"></span>
+             </div>
+           </div>
+         </nav>
 
         <!--
 
@@ -63,7 +73,7 @@
 
          -->
 
-        <form class="contact__form" action="#">
+        <form class="contact__form easy-reveal" action="#">
           <input id="FirstName" name="First Name" type="text" placeholder="First Name">
           <input id="LastName" name="Last Name" type="text" placeholder="Last Name">
           <input id="MainEmail" type="email" placeholder="Email">
@@ -77,9 +87,9 @@
 
          -->
 
-        <section class="FlickR">
+        <section class="FlickR easy-reveal">
           <h2 class="FlickR__title">Follow us on FlickR</h2>
-          <div class="FlickR__container"></div>
+          <div class="FlickR__container owl-carousel owl-theme"></div>
         </section>
 
         <!--
@@ -88,7 +98,7 @@
 
          -->
 
-        <section class="google">
+        <section class="google easy-reveal">
           <div id="map"></div>
         </section>
       </main>
@@ -124,7 +134,7 @@
           <button type="submit" class="get-in-touch__btn"> Submit</button>
         </form>
         <small class="get-in-touch__copyright">
-          ©2016 Orison.
+          ©2016 Orison.<br>
           All rights reserved.
         </small>
       </footer>
@@ -137,9 +147,9 @@
 
       <script id="flickr-template" type="text/x-handlebars-template">
         {{#each photo}}
-        <a class="FlickR__link" href="https://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_b.jpg" target="_blank">
+        <div class="FlickR__link" data-featherlight="https://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_b.jpg">
           <img class="FlickR__img" src="https://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_n.jpg" alt="" data-id="{{id}}">
-        </a>
+        </div>
         {{/each}}
       </script>
 
@@ -148,6 +158,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBikZdvRXs73FS--d-BZlrXQqAod5FRXHc&callback=initMap"></script>
         <script src="js/easy-reveal.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/featherlight.min.js"></script>
         <script src="js/main.min.js"></script>
     </body>
 </html>

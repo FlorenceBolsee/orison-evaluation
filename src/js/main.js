@@ -244,19 +244,35 @@ function initMap() {
 var source = $("#flickr-template").html();
 var template = Handlebars.compile(source);
 
-  $.getJSON( "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&jsoncallback=?", {
-    tags: "lamp",
-    tag_mode: "all",
-    sort: "relevance",
-    per_page: "21",
-    page: "1",
-    safe_search: "1",
-    content_type: "1",
-    api_key: "e76971e2bfcc8fed432e3a8eb69c04ee"
-  })
-    .done(function(data) {
-      $(".FlickR__container").empty();
-      console.log(data);
-      var gallery = template(data.photos);
-      $(".FlickR__container").append(gallery);
+$.getJSON( "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&jsoncallback=?", {
+  tags: "lamp",
+  tag_mode: "all",
+  sort: "relevance",
+  per_page: "21",
+  page: "1",
+  safe_search: "1",
+  content_type: "1",
+  api_key: "e76971e2bfcc8fed432e3a8eb69c04ee"
+})
+.done(function(data) {
+  $(".FlickR__container").empty();
+  console.log(data);
+  var gallery = template(data.photos);
+  $(".FlickR__container").append(gallery);
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+      0:{
+        items:1
+      },
+      600:{
+        items:3
+      },
+      1000:{
+        items:5
+      }
+    }
+  });
 });

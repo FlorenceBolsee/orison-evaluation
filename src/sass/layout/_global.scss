@@ -36,7 +36,7 @@ a {
   }
 }
 
-.hero__btn--light, .products__btn, .get-in-touch__btn, .contact__btn {
+.hero__btn--light, .products__btn, .get-in-touch__btn, .contact__btn, .blog__btn {
   border: 0;
   background: $grey2;
 }
@@ -50,6 +50,16 @@ a {
   }
 }
 
+.blog__btn--light {
+  border: 1px solid transparent;
+  @media screen and (min-width: $tablet) {
+    &:hover {
+      border: 1px solid $grey4;
+      background: none;
+    }
+  }
+}
+
 
 // INDEX - SECTIONS
 
@@ -58,7 +68,7 @@ a {
   margin: 0 auto;
 }
 
-.how-it-works, .products, .press, .FlickR, .google {
+.how-it-works, .products, .press, .FlickR, .google, .blogs {
   padding: 60px 20px 45px;
 }
 

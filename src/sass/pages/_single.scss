@@ -1,0 +1,10 @@
+.single-page {
+  @extend .blog-page;
+  .hero {
+    padding-bottom: 50px;
+  }
+}
+
+.blog-full {
+  @extend .search;
+}

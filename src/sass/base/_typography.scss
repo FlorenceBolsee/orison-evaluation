@@ -74,7 +74,7 @@ body {
 	}
 }
 
-.hero__btn, .products__btn, .read-more__btn, .reservation__btn, .get-in-touch__btn, .contact__btn {
+.hero__btn, .products__btn, .read-more__btn, .reservation__btn, .get-in-touch__btn, .contact__btn, .blog__btn {
 	@extend .fontXS;
 	font-weight: 700;
 	color: #fff;
@@ -121,6 +121,42 @@ body {
 	}
 }
 
+.blog__author, .categories__links {
+	&:hover {
+		color: $grey2;
+	}
+	@media screen and (min-width: $tablet){
+		&:hover {
+			color: $grey4;
+		}
+	}
+}
+
+.categories__links {
+	font-size: 1.2em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $grey2;
+	letter-spacing: 1px;
+	line-height: 2.4rem;
+}
+
+.recent__links {
+	@extend .fontSM;
+	letter-spacing: 1px;
+	color: #000;
+	line-height: 1.8rem;
+
+	&:hover {
+		color: #000;
+	}
+	@media screen and (min-width: $tablet){
+		&:hover {
+			color: $grey2;
+		}
+	}
+}
+
 
 // TITLES
 
@@ -136,12 +172,19 @@ body {
 	color: #fff;
 }
 
-.products__name, .read-more__title, .reservation__title, .contact-page .hero__headline, .FlickR__title, .google__title {
+.products__name, .read-more__title, .reservation__title, .contact-page .hero__headline, .blog-page .hero__headline, .FlickR__title, .google__title {
 	font-size: 2.4rem;
 	font-weight: 200;
 	color: #fff;
 	@media screen and (min-width: $desktop) {
 		font-size: 4rem;
+	}
+}
+
+.blog-page .hero__headline {
+	line-height: 3rem;
+	@media screen and (min-width: $desktop)  {
+		line-height: 4.5rem;
 	}
 }
 
@@ -185,6 +228,31 @@ body {
 	color: $grey1;
 }
 
+.blog__title {
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+
+.blog__date, .blog__author {
+	@extend .fontSM;
+	color: $grey2;
+	font-weight: 400;
+}
+
+.blog-page .hero__date {
+	@extend .fontMD;
+	color: #fff;
+}
+
+.blog-full__title {
+	@extend .fontMD;
+	font-weight: 400;
+	color: #000;
+	line-height: 3rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
 
 // TEXT
 
@@ -215,16 +283,31 @@ body {
 	color: $grey1;
 }
 
-.press__text {
+.press__text, .blog__intro {
 	@extend .fontMD;
 	font-weight: 200;
 	color: #000;
+}
+
+.blog__intro {
+	line-height: 3rem;
 }
 
 .get-in-touch__copyright {
 	@extend .fontSM;
 	font-weight: 200;
 	color: $grey1;
+}
+
+.recent__date {
+	font-size: 1.2rem;
+	color: $grey1;
+}
+
+.twitter__post {
+	@extend .fontMD;
+	color: #000;
+	line-height: 1.8rem;
 }
 
 
@@ -260,4 +343,25 @@ body {
 
 .contact__btn {
 	font-size: 1.4rem;
+}
+
+
+.search__bar::placeholder, .categories__title {
+	font-size: 1.2rem;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+}
+
+.search__bar {
+	@extend .fontSM;
+	color: #000;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+}
+
+.fa-search {
+	@extend .fontMD;
+	color: $grey2;
 }

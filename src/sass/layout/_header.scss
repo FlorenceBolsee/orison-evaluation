@@ -6,11 +6,13 @@
   top: 0;
   left: 0;
   padding: 25px 20px;
-  background: $grey4;
+  background: rgba($grey4, .95);
   z-index: 1000;
+  @include transition;
 
   @media screen and (min-width: $tablet) {
-    background: linear-gradient($grey4, rgba($grey4, 0));
+    background: rgba($grey4, 0);
+    box-shadow: 0 200px 100px -100px rgba($grey4, .9) inset;
     padding: 45px 20px 30px;
   }
 }
@@ -28,12 +30,14 @@
 }
 
 .menu.scroll {
-  background: linear-gradient($grey4, rgba($grey4, .9));
+  background: rgba($grey4, .8);
+  box-shadow: 0 200px 100px -100px rgba($grey4, .9) inset;
 
   @media screen and (min-width: $tablet)  {
     background: rgba($grey4, .9);
   }
 }
+
 
 .menu__logo {
   width: 120px;
@@ -43,18 +47,36 @@
 .menu__wrapper {
   display: none;
   list-style: none;
+  order: 1;
+
   @media screen and (min-width: $tablet) {
+    order: 0;
     display: flex;
+    flex-flow: wrap;
     flex-basis: 80%;
     justify-content: flex-end;
   }
 }
 
+.menu__wrapper, .menu__btn {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  @media screen and (min-width: $tablet) {
+    width: auto;
+  }
+}
+
 .menu__btn {
-  display: none;
+  border: none;
   @media screen and (min-width: $tablet) {
     display: block;
-    margin-left: auto;
+    margin-left: 80%;
+    margin-top: 10px;
+    order: 0;
+    border: 1px solid #fff;
+    padding: 8px 30px;
   }
 }
 
@@ -81,35 +103,14 @@
 }
 
 .menu__elements {
+  margin-top: 20px;
   @media screen and (min-width: $tablet) {
     margin: 0 15px;
   }
 }
 
-
-// NAV MOBILE ON CLIC
-
-
-.menu.open {
-
-  .menu__wrapper, .menu__btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-  }
-  .menu__wrapper {
-    order: 1;
-    list-style: none;
-  }
-  .menu__btn {
-    order: 2;
-    margin-top: 20px;
-  }
-  .menu__elements {
-    margin-top: 20px;
-  }
+.menu__elements:last-of-type {
+  margin-bottom: 20px;
 }
 
 
@@ -120,6 +121,8 @@
   background: url("../img/Orison-Hero-5.jpg") center center;
   background-size: cover;
   padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
   @media screen and (min-width: $tablet) {
     padding: 250px 20px;
   }

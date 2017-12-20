@@ -20,7 +20,7 @@ a {
   border: 1px solid #fff;
 }
 
-.hero__btn, .products__btn, .get-in-touch__btn, .contact__btn {
+.hero__btn, .products__btn, .get-in-touch__btn, .contact__btn, .panel__btn, .tower__btn {
   @media screen and (min-width: $tablet) {
     &:hover {
       background: #fff;
@@ -36,7 +36,7 @@ a {
   }
 }
 
-.hero__btn--light, .products__btn, .get-in-touch__btn, .contact__btn, .blog__btn {
+.hero__btn--light, .products__btn, .get-in-touch__btn, .contact__btn, .blog__btn, .panel__btn--light, .tower__btn--light, .cloud__btn {
   border: 0;
   background: $grey2;
 }
@@ -50,7 +50,7 @@ a {
   }
 }
 
-.blog__btn--light {
+.blog__btn--light, .cloud__btn {
   border: 1px solid transparent;
   @media screen and (min-width: $tablet) {
     &:hover {
@@ -68,7 +68,7 @@ a {
   margin: 0 auto;
 }
 
-.how-it-works, .products, .press, .FlickR, .google, .blogs {
+.how-it-works, .products, .press, .FlickR, .google, .blogs, .panel, .tower, .installation, .app, .cloud {
   padding: 60px 20px 45px;
 }
 
@@ -76,10 +76,16 @@ a {
   padding-bottom: 10px;
 }
 
-.why-orison, .read-more__block {
+.why-orison, .read-more__block, .for-all {
   padding: 60px 40px 60px;
   @media screen and (min-width: $desktop){
     padding: 100px 0 130px;
+  }
+}
+
+.for-all {
+  @media screen and (min-width: $desktop){
+    padding: 0;
   }
 }
 
@@ -253,6 +259,7 @@ a {
 .reservation {
   text-align: center;
   padding: 60px 20px 70px;
+  background: $grey4;
 }
 
 .reservation__photo {

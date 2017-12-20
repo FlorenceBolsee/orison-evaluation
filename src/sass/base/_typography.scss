@@ -44,7 +44,7 @@ body {
 	font-size: 1.6rem;
 }
 
-.fontLA {
+.fontLA, .for-all__subtitle {
 	font-size: 3.6rem;
 	font-weight: 200;
 }
@@ -74,7 +74,7 @@ body {
 	}
 }
 
-.hero__btn, .products__btn, .read-more__btn, .reservation__btn, .get-in-touch__btn, .contact__btn, .blog__btn {
+.hero__btn, .products__btn, .read-more__btn, .reservation__btn, .get-in-touch__btn, .contact__btn, .blog__btn, .panel__btn, .tower__btn, .cloud__btn {
 	@extend .fontXS;
 	font-weight: 700;
 	color: #fff;
@@ -110,7 +110,7 @@ body {
 	}
 }
 
-.get-in-touch__socials-links {
+.get-in-touch__socials-links, .app__faq {
 	@extend .fontMD;
 	color: #fff;
 	@media screen and (min-width: $tablet) {
@@ -121,7 +121,16 @@ body {
 	}
 }
 
-.blog__author, .categories__links {
+.app__faq {
+	font-weight: 700;
+}
+
+.fa-question-circle-o {
+	color: $grey1;
+	font-size: 1.9rem;
+}
+
+.blog__author, .categories__links, .author__socials-links, .author__link {
 	&:hover {
 		color: $grey2;
 	}
@@ -146,9 +155,56 @@ body {
 	letter-spacing: 1px;
 	color: #000;
 	line-height: 1.8rem;
+}
 
+.single-page .hero__link {
+	@extend .fontXS;
+	font-weight: 700;
+	color: $grey2;
+	text-transform: uppercase;
+	@media screen and (min-width: $tablet){
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+.blog-full__link, .author__link, .recent-posts__title {
+	color: $grey2;
+}
+
+.author__link, .recent-posts__title {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.recent-posts__link {
+	color: #000;
+	font-weight: 700;
+}
+
+.recent__links, .recent-posts__link {
 	&:hover {
 		color: #000;
+	}
+	@media screen and (min-width: $tablet){
+		&:hover {
+			color: $grey2;
+		}
+	}
+}
+
+.panel__strong, .tower__strong  {
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.panel__socials-links, .tower__socials-links {
+	color: $grey1;
+	&:hover {
+		color: $grey1;
 	}
 	@media screen and (min-width: $tablet){
 		&:hover {
@@ -172,7 +228,7 @@ body {
 	color: #fff;
 }
 
-.products__name, .read-more__title, .reservation__title, .contact-page .hero__headline, .blog-page .hero__headline, .FlickR__title, .google__title {
+.products__name, .read-more__title, .reservation__title, .contact-page .hero__headline, .blog-page .hero__headline, .FlickR__title, .google__title, .panel__subtitle, .tower__subtitle, .app__subtitle, .cloud__subtitle {
 	font-size: 2.4rem;
 	font-weight: 200;
 	color: #fff;
@@ -188,11 +244,11 @@ body {
 	}
 }
 
-.FlickR__title, .google__title {
+.FlickR__title, .google__title, .cloud__subtitle {
 	color: #000;
 }
 
-.how-it-works__title, .products__title, .why-orison__title, .contact-page .hero__headline--strong {
+.how-it-works__title, .products__title, .why-orison__title, .contact-page .hero__headline--strong, .panel__title, .tower__title, .installation__title, .for-all__title, .consumers__title, .app__title, .cloud__title {
 	@extend .fontMD;
 	font-weight: 700;
 	color: $grey2;
@@ -204,7 +260,7 @@ body {
 	font-size: 1.6rem;
 }
 
-.why-orison__subtitle {
+.why-orison__subtitle, .installation__intro {
 	font-size: 2rem;
 	line-height: 3rem;
 	font-weight: 200;
@@ -215,7 +271,7 @@ body {
 	}
 }
 
-.features__title {
+.features__title, .installation__subtitle {
 	@extend .fontSM;
 	color: $grey4;
 	text-transform: uppercase;
@@ -228,7 +284,7 @@ body {
 	color: $grey1;
 }
 
-.blog__title {
+.blog__title, .panel__socials-links, .tower__socials-links {
 	font-size: 2.4rem;
 	font-weight: 700;
 }
@@ -253,6 +309,29 @@ body {
 	text-align: center;
 }
 
+.blog-full__subtitle {
+	@extend .fontMD;
+	font-weight: 400;
+	color: #000;
+}
+
+.author__name {
+	@extend .fontXS;
+	font-weight: 700;
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.author__role {
+	font-size: 1.2rem;
+	font-weight: 200;
+	color: #000;
+}
+
+.recent-posts__title, .recent-posts__link {
+	font-size: 1.8rem;
+}
 
 // TEXT
 
@@ -268,12 +347,12 @@ body {
 	}
 }
 
-.products__text {
+.products__text, .panel__text, .tower__text, .app__text, .cloud__text {
 	@extend .fontMD;
 	color: $grey1;
 }
 
-.features__text, .read-more__text {
+.features__text, .read-more__text, .installation__text {
 	@extend .fontMD;
 	font-weight: 200;
 	color: $grey5;
@@ -283,13 +362,13 @@ body {
 	color: $grey1;
 }
 
-.press__text, .blog__intro {
+.press__text, .blog__intro, .blog-full__text {
 	@extend .fontMD;
 	font-weight: 200;
 	color: #000;
 }
 
-.blog__intro {
+.blog__intro, .blog-full__text {
 	line-height: 3rem;
 }
 
@@ -341,10 +420,13 @@ body {
 	@extend .fontMD;
 }
 
-.contact__btn {
+.contact__btn, .author__link, .panel__strong, .tower__strong, .consumers__text, .app__faq {
 	font-size: 1.4rem;
 }
 
+.consumers__text {
+	color: $grey5;
+}
 
 .search__bar::placeholder, .categories__title {
 	font-size: 1.2rem;
@@ -361,7 +443,17 @@ body {
 	letter-spacing: 1.5px;
 }
 
-.fa-search {
+.fa-search, .author__socials-links {
 	@extend .fontMD;
 	color: $grey2;
+}
+
+
+// OTHER
+
+
+.consumers__count {
+	font-size: 7.2rem;
+	color: $grey2;
+	font-weight: 200;
 }

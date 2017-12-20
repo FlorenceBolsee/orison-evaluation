@@ -1,0 +1,192 @@
+.products-page {
+  background: #fff;
+  .hero {
+    padding: 0;
+    background: none;
+  }
+}
+
+.panel {
+  background: $grey4;
+  @media screen and (min-width: $desktop) {
+    padding-top: 150px;
+  }
+}
+
+.panel__block, .tower__block {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  @media screen and (min-width: $desktop) {
+    padding: 50px 0 0;
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
+
+.panel__container, .tower__container, .app__container {
+  @extend .wrapper;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.panel__img, .tower__img {
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.panel__img {
+  @media screen and (min-width: $desktop) {
+    order: 1;
+    max-width: 650px;
+    position: relative;
+    left: 100px;
+  }
+}
+
+.panel__title, .panel__share, .tower__title, .tower__share, .panel__subtitle, .panel__text {
+  flex-basis: 100%;
+}
+
+.panel__text, .tower__text {
+  padding-bottom: 20px;
+}
+
+.panel__btn--light, .tower__btn--light {
+  margin-right: 13px;
+}
+
+.panel__share, .tower__share {
+  margin-top: 30px;
+}
+
+.panel__socials-links, .tower__socials-links {
+  margin-left: 20px;
+}
+
+.tower {
+  background: $grey3;
+}
+
+.tower__img {
+  max-height: 350px;
+  margin-bottom: 15px;
+  @media screen and (min-width: $desktop) {
+    max-height: 650px;
+    margin: 0 100px;
+  }
+}
+
+.installation {
+  background: #fff;
+  text-align: center;
+}
+
+.installation__container {
+  @extend .wrapper;
+}
+
+.installation__wrapper {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.installation__intro {
+  padding: 20px 0 40px;
+}
+
+.installation__icon {
+  max-height: 95px;
+  margin-bottom: 25px;
+}
+
+.installation__icon--plug {
+  position: relative;
+  left: 30px;
+}
+
+.installation__steps {
+  background: rgba($grey2, .1);
+  padding: 40px;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: $desktop) {
+  .installation__steps +.installation__steps {
+    margin-left: 15px;
+  }
+}
+
+.for-all {
+  background: rgba($grey2, .1);
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.for-all__block--wrap {
+  @media screen and (min-width: $desktop) {
+    width: 50%;
+    padding: 60px 0;
+  }
+}
+
+.for-all__block--img {
+  @media screen and (min-width: $desktop) {
+    background: url("../img/features.jpg");
+    background-size: cover;
+    width: 50%;
+    height: 1100px;
+  }
+}
+
+.consumers {
+  max-width: 370px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba($grey1, .2);
+  padding-bottom: 15px;
+}
+
+.app {
+  background: $grey4;
+}
+
+.app__block, .cloud__block {
+  @extend .wrapper;
+}
+
+.app__faq {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fa-question-circle-o {
+  margin-right: 10px;
+}
+
+.app__text {
+  padding: 20px 0;
+}
+
+.app__img {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.cloud__text {
+  margin-bottom: 50px;
+}
+
+.app__img {
+  @media screen and (min-width: $desktop) {
+    max-width: 650px;
+  }
+}

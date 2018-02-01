@@ -1,3 +1,26 @@
+// HEADER DYNANMIQUES
+
+var bg;
+
+
+$(document).ready(
+  function(){
+    if($("body").hasClass("blog-page")){
+      bg = 'url("../' + $(".blog--last .blog__img").attr("src") + '")';
+      $(".hero__headline").text($(".blog--last .blog__title").text());
+      $(".hero__date").text($(".blog--last .blog__date").text().slice(0, -3));
+    }
+    if($("body").hasClass("single-page")){
+      bg = 'url("../' + $(".blog-full").data("img") + '")';
+      $(".hero__headline").text($(".blog-full").data("title"));
+      $(".hero__date").text($(".blog-full").data("date"));
+    }
+    if($("body").hasClass("blog-page") || $("body").hasClass("single-page")){
+      $(".hero").css('background', 'rgba(0, 0, 0, .5)');
+      $(".hero__parallax").css('background-image', bg);
+    }
+  }
+);
 
 // EFFET PARALLAX
 

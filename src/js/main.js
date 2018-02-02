@@ -11,7 +11,7 @@ $(document).ready(
       $(".hero__date").text($(".blog--last .blog__date").text().slice(0, -3));
     }
     if($("body").hasClass("single-page")){
-      bg = 'url("../' + $(".blog-full").data("img") + '")';
+      bg = 'url("' + $(".blog-full").data("img") + '")';
       $(".hero__headline").text($(".blog-full").data("title"));
       $(".hero__date").text($(".blog-full").data("date"));
     }
@@ -37,7 +37,6 @@ var parallaxEffect = function(){
     scrollLevel = $(window).scrollTop();
     if (scrollLevel > 0 && scrollLevel < heroHeight) {
       heroTop = scrollLevel / heroHeight * max - max + '%';
-      console.log(heroTop);
       $parallax.css('top', heroTop);
     }
   }

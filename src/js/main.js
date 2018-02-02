@@ -6,7 +6,7 @@ var bg;
 $(document).ready(
   function(){
     if($("body").hasClass("blog-page")){
-      bg = 'url("../' + $(".blog--last .blog__img").attr("src") + '")';
+      bg = 'url("' + $(".blog--last .blog__img").attr("src") + '")';
       $(".hero__headline").text($(".blog--last .blog__title").text());
       $(".hero__date").text($(".blog--last .blog__date").text().slice(0, -3));
     }
